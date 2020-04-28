@@ -1,0 +1,35 @@
+[color]
+  ui = auto
+[alias]
+  ci = commit
+  di = diff
+  st = status
+  co = checkout
+  br = branch
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  conflict = ls-files -u | awk '{print $4}' | sort -u
+[user]
+  name = Jonathan Mason
+  email = jonathan.mason@salesforce.com
+  signingkey = B7FE12741AD678F0
+[push]
+  default = upstream
+[core]
+  pager = less -RSX
+  excludesfile = ~/dotfiles/gitignore_global
+[merge]
+  tool = vimdiff
+#[mergetool "mvim"]
+  #cmd = /Users/jonathan.mason/bin/mvim -d -g $LOCAL $MERGED $REMOTE
+  #keepbackup = false
+[gpg]
+  program = gpg2
+[commit]
+  gpgsign = true
+[credential "https://git-codecommit.us-west-2.amazonaws.com"]
+	helper = !aws codecommit credential-helper $@
+	useHttpPath = true
+[url "ssh://git@github.com/sfdc-pcg/"]
+  insteadOf = https://github.com/sfdc-pcg/
+[url "ssh://git@git.soma.salesforce.com/"]
+  insteadOf = https://git.soma.salesforce.com/

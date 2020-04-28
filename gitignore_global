@@ -1,0 +1,12 @@
+.DS_Store
+*~
+*.swp
+.bundle
+vendor/bundle
+.idea
+.tool-versions
+.env
+.envrc
+log/*.log
+log/newrelic_agent.log
+__pycache__
