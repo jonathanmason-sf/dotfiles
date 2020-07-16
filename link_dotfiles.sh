@@ -7,6 +7,9 @@ function backup() {
   fi
 }
 
+backup ~/.bashrc
+ln -s ~/dotfiles/bashrc ~/.bashrc
+
 backup ~/.gitconfig
 ln -s ~/dotfiles/gitconfig_global ~/.gitconfig
 
